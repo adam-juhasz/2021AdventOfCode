@@ -16,8 +16,8 @@ if __name__ == '__main__':
     count_increase(measurements)
 
     sliding_window = np.array([])
-    for i in range(1,len(measurements)-1):
-        sliding_window = np.append(sliding_window, np.sum(measurements[i-1:i+2]))
+    for i in range(len(measurements)-2):
+        sliding_window = np.append(sliding_window, np.sum(measurements[i:i+3]))
 
     count_increase(sliding_window)
 
